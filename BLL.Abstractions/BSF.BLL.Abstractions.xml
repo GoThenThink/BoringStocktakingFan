@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BSF.BLL.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:BSF.BLL.Abstractions.Dto.CategoryBusinessDto">
+            <summary>
+            Транспортная модель объекта "Категория" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CategoryBusinessDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) категории.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CategoryBusinessDto.Name">
+            <summary>
+            Название категории.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CategoryBusinessDto.CodePrefixId">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CategoryBusinessDto.Description">
+            <summary>
+            Описание категории.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CategoryBusinessDto.ParentId">
+            <summary>
+            Идентификационный номер родительской категории.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CategoryBusinessDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.BLL.Abstractions.Dto.CodePrefixBusinessDto">
+            <summary>
+            Транспортная модель объекта "Префикс кода" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CodePrefixBusinessDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) код-префикса.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CodePrefixBusinessDto.Code">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.CodePrefixBusinessDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.BLL.Abstractions.Dto.ItemBusinessDto">
+            <summary>
+            Транспортная модель объекта "Предмет" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.Name">
+            <summary>
+            Название предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.Code">
+            <summary>
+            Код предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.Description">
+            <summary>
+            Описание предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.CategoryId">
+            <summary>
+            Идентификационный номер категории.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.StorageId">
+            <summary>
+            Идентификационный номер хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.OwnerId">
+            <summary>
+            Идентификационный номер владельца предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.ItemBusinessDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.BLL.Abstractions.Dto.OwnerBusinessDto">
+            <summary>
+            Транспортная модель объекта "Владелец предмета" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.OwnerBusinessDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) владельца предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.OwnerBusinessDto.Name">
+            <summary>
+            Имя владельца.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.OwnerBusinessDto.Description">
+            <summary>
+            Дополнительная информация о владельце.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.OwnerBusinessDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.BLL.Abstractions.Dto.StorageBusinessDto">
+            <summary>
+            Транспортная модель объекта "Хранилище" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.StorageBusinessDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.StorageBusinessDto.Name">
+            <summary>
+            Название хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.StorageBusinessDto.CodePrefixId">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.StorageBusinessDto.Description">
+            <summary>
+            Описание хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.StorageBusinessDto.ParentId">
+            <summary>
+            Идентификационный номер родительского хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.BLL.Abstractions.Dto.StorageBusinessDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Abstractions.IBaseService`2.CreateAsync(`1)">
+            <summary>
+            Базовый интерфейс метода "Создать запись"
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Abstractions.IBaseService`2.GetAsync(`0)">
+            <summary>
+            Базовый интерфейс метода "Получить запись"
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Abstractions.IBaseService`2.GetListAsync">
+            <summary>
+            Базовый интерфейс метода "Получить список"
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Abstractions.IBaseService`2.UpdateAsync(`0,`1)">
+            <summary>
+            Базовый интерфейс метода "Обновить запись"
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Abstractions.IBaseService`2.DeleteAsync(`0)">
+            <summary>
+            Базовый интерфейс метода "Удалить запись"
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Abstractions.IBaseService`2.PatchAsync(`0,System.String,`1)">
+            <summary>
+            Базовый интерфейс метода "Частично обновить запись"
+            </summary>
+        </member>
+    </members>
+</doc>

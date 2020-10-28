@@ -1,4 +1,4 @@
-﻿using BSF.DAL.Dto;
+﻿using BSF.DAL.Abstractions.Dto;
 
 namespace BSF.DAL.Abstractions
 {

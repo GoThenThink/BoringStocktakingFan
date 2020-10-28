@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.Abstractions", "..\DAL.Abstractions\DAL.Abstractions.csproj", "{D62A5167-89CD-4DA5-97AB-7D72C5B63AA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Abstractions", "..\BLL.Abstractions\BLL.Abstractions.csproj", "{96DA20AF-44D8-462E-8B4F-18FCC993D049}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D62A5167-89CD-4DA5-97AB-7D72C5B63AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D62A5167-89CD-4DA5-97AB-7D72C5B63AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D62A5167-89CD-4DA5-97AB-7D72C5B63AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96DA20AF-44D8-462E-8B4F-18FCC993D049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96DA20AF-44D8-462E-8B4F-18FCC993D049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96DA20AF-44D8-462E-8B4F-18FCC993D049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96DA20AF-44D8-462E-8B4F-18FCC993D049}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

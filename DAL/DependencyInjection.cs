@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BSF.DAL.Abstractions;
 using BSF.DAL.Abstractions.Connection;
 using BSF.DAL.Connection;
 using BSF.DAL.Mapping;
@@ -25,8 +26,12 @@ namespace BSF.DAL
         private static IServiceCollection RegisterRepositories(
             this IServiceCollection services)
         {
-            return services;
-           //     .AddSingleton<IAgesRepo, AgesRepo>();
+            return services
+                .AddSingleton<IBaseCodePrefixesRepo, BaseCodePrefixesRepo>()
+                .AddSingleton<IBaseCategoriesRepo, BaseCategoriesRepo>()
+                .AddSingleton<IBaseStoragesRepo, BaseStoragesRepo>()
+                .AddSingleton<IBaseItemsRepo, BaseItemsRepo>()
+                .AddSingleton<IBaseOwnersRepo, BaseOwnersRepo>();
         }
 
         private static IServiceCollection RegisterMapperProfiles(

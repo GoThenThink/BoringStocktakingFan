@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>BSF.DAL.Abstractions</AssemblyName>
-    <RootNamespace>BSF.DAL.Abstractions</RootNamespace>
+    <AssemblyName>BSF.BLL.Abstractions</AssemblyName>
+    <RootNamespace>BSF.BLL.Abstractions</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>BSF.DAL.Abstractions.xml</DocumentationFile>
+    <DocumentationFile>BSF.BLL.Abstractions.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

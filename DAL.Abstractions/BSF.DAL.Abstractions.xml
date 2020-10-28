@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BSF.DAL.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:BSF.DAL.Abstractions.Connection.IDbConnectionFactory">
+            <summary>
+            Интерфейс для соединения с БД
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.Abstractions.Connection.IDbConnectionFactory.GetConnection">
+            <summary>
+             Возвращает соединение.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.Dto.CategoryEntityDto">
+            <summary>
+            Транспортная модель объекта "Категория" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CategoryEntityDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CategoryEntityDto.Name">
+            <summary>
+            Название категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CategoryEntityDto.CodePrefixId">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CategoryEntityDto.Description">
+            <summary>
+            Описание категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CategoryEntityDto.ParentId">
+            <summary>
+            Идентификационный номер родительской категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CategoryEntityDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.Dto.CodePrefixEntityDto">
+            <summary>
+            Транспортная модель объекта "Префикс кода" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CodePrefixEntityDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) код-префикса.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CodePrefixEntityDto.Code">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.CodePrefixEntityDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.Dto.ItemEntityDto">
+            <summary>
+            Транспортная модель объекта "Предмет" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.Name">
+            <summary>
+            Название предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.Code">
+            <summary>
+            Код предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.Description">
+            <summary>
+            Описание предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.CategoryId">
+            <summary>
+            Идентификационный номер категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.StorageId">
+            <summary>
+            Идентификационный номер хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.OwnerId">
+            <summary>
+            Идентификационный номер владельца предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.ItemEntityDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.Dto.OwnerEntityDto">
+            <summary>
+            Транспортная модель объекта "Владелец предмета" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.OwnerEntityDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) владельца предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.OwnerEntityDto.Name">
+            <summary>
+            Имя владельца.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.OwnerEntityDto.Description">
+            <summary>
+            Дополнительная информация о владельце.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.OwnerEntityDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.Dto.StorageEntityDto">
+            <summary>
+            Транспортная модель объекта "Хранилище" для использования в бизнес-логике
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.StorageEntityDto.Id">
+            <summary>
+            Уникальный идентификационный номер(id) хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.StorageEntityDto.Name">
+            <summary>
+            Название хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.StorageEntityDto.CodePrefixId">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.StorageEntityDto.Description">
+            <summary>
+            Описание хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.StorageEntityDto.ParentId">
+            <summary>
+            Идентификационный номер родительского хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Abstractions.Dto.StorageEntityDto.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.IBaseCategoriesRepo">
+            <summary>
+            Интерфейс для репозитория категорий
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.IBaseCodePrefixesRepo">
+            <summary>
+            Интерфейс для код-префикс репозитория
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.IBaseItemsRepo">
+            <summary>
+            Интерфейс для репозитория предметов
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.IBaseOwnersRepo">
+            <summary>
+            Интерфейс для репозитория "Владельцы предметов"
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.CreateAsync(`1)">
+            <summary>
+            Базовый интерфейс метода "Создать запись"
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.GetAsync(`0)">
+            <summary>
+            Базовый интерфейс метода "Получить запись"
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.GetListAsync">
+            <summary>
+            Базовый интерфейс метода "Получить список"
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.UpdateAsync(`0,`1)">
+            <summary>
+            Базовый интерфейс метода "Обновить запись"
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.DeleteAsync(`0)">
+            <summary>
+            Базовый интерфейс метода "Удалить запись"
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.PatchAsync(`0,System.String,`1)">
+            <summary>
+            Базовый интерфейс метода "Частично обновить запись"
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Abstractions.IBaseStoragesRepo">
+            <summary>
+            Интерфейс для репозитория хранилищ
+            </summary>
+        </member>
+    </members>
+</doc>

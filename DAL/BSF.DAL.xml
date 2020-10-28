@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BSF.DAL</name>
+    </assembly>
+    <members>
+        <member name="T:BSF.DAL.CrudMethodsEnum">
+            <summary>
+            Перечисление для маппинга базовых методов в репозиториях
+            </summary>
+        </member>
+        <member name="F:BSF.DAL.CrudMethodsEnum.Create">
+            <summary/>
+        </member>
+        <member name="F:BSF.DAL.CrudMethodsEnum.Delete">
+            <summary/>
+        </member>
+        <member name="F:BSF.DAL.CrudMethodsEnum.Get">
+            <summary/>
+        </member>
+        <member name="F:BSF.DAL.CrudMethodsEnum.GetList">
+            <summary/>
+        </member>
+        <member name="F:BSF.DAL.CrudMethodsEnum.Update">
+            <summary/>
+        </member>
+        <member name="T:BSF.DAL.DependencyInjection">
+            <summary>
+            Класс для установки уровня доступа к данным
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.DependencyInjection.AddDataAccessLayer(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+             Добавление всех компонентов уровня
+             </summary>
+        </member>
+        <member name="T:BSF.DAL.Entities.CategoryEntity">
+            <summary>
+            Модель объекта таблицы БД categories
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CategoryEntity.Id">
+            <summary>
+            Уникальный идентификационный номер(id) категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CategoryEntity.Name">
+            <summary>
+            Название категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CategoryEntity.CodePrefixId">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CategoryEntity.Description">
+            <summary>
+            Описание категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CategoryEntity.ParentId">
+            <summary>
+            Идентификационный номер родительской категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CategoryEntity.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Entities.CodePrefixEntity">
+            <summary>
+            Модель объекта таблицы БД code_prefixes
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CodePrefixEntity.Id">
+            <summary>
+            Уникальный идентификационный номер(id) код-префикса.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CodePrefixEntity.Code">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.CodePrefixEntity.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Entities.IEntityId`1">
+            <summary>
+            Интерфейс для доступа к идентификационному номеру объекта БД
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.IEntityId`1.Id">
+            <summary>
+            Идентификационный номер.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Entities.ItemEntity">
+            <summary>
+            Модель объекта таблицы БД items
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.Id">
+            <summary>
+            Уникальный идентификационный номер(id) предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.Name">
+            <summary>
+            Название предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.Code">
+            <summary>
+            Код предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.Description">
+            <summary>
+            Описание предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.CategoryId">
+            <summary>
+            Идентификационный номер категории.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.StorageId">
+            <summary>
+            Идентификационный номер хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.OwnerId">
+            <summary>
+            Идентификационный номер владельца предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.ItemEntity.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Entities.OwnerEntity">
+            <summary>
+            Модель объекта таблицы БД owners
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.OwnerEntity.Id">
+            <summary>
+            Уникальный идентификационный номер(id) владельца предмета.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.OwnerEntity.Name">
+            <summary>
+            Имя владельца.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.OwnerEntity.Description">
+            <summary>
+            Дополнительная информация о владельце.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.OwnerEntity.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="T:BSF.DAL.Entities.StorageEntity">
+            <summary>
+            Модель объекта таблицы БД storages
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.StorageEntity.Id">
+            <summary>
+            Уникальный идентификационный номер(id) хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.StorageEntity.Name">
+            <summary>
+            Название хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.StorageEntity.CodePrefixId">
+            <summary>
+            Код-префикс.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.StorageEntity.Description">
+            <summary>
+            Описание хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.StorageEntity.ParentId">
+            <summary>
+            Идентификационный номер родительского хранилища.
+            </summary>
+        </member>
+        <member name="P:BSF.DAL.Entities.StorageEntity.UserId">
+            <summary>
+            Идентификационный номер пользователя.
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.BaseCategoriesRepo.PatchAsync(System.Int64,System.String,BSF.DAL.Abstractions.Dto.CategoryEntityDto)">
+            <summary>
+            Обновление одного поля объекта.
+            </summary>
+            <param name="id">Идентификационный номер объекта.</param>
+            <param name="property">Название поля объекта.</param>
+            <param name="model">Модель объекта, содержащая новое значение поля.</param>
+            <returns>Обновленный объект.</returns>
+        </member>
+        <member name="M:BSF.DAL.BaseCodePrefixesRepo.PatchAsync(System.Int32,System.String,BSF.DAL.Abstractions.Dto.CodePrefixEntityDto)">
+            <summary>
+            Обновление одного поля объекта.
+            </summary>
+            <param name="id">Идентификационный номер объекта.</param>
+            <param name="property">Название поля объекта.</param>
+            <param name="model">Модель объекта, содержащая новое значение поля.</param>
+            <returns>Обновленный объект.</returns>
+        </member>
+        <member name="M:BSF.DAL.BaseItemsRepo.PatchAsync(System.Int64,System.String,BSF.DAL.Abstractions.Dto.ItemEntityDto)">
+            <summary>
+            Обновление одного поля объекта.
+            </summary>
+            <param name="id">Идентификационный номер объекта.</param>
+            <param name="property">Название поля объекта.</param>
+            <param name="model">Модель объекта, содержащая новое значение поля.</param>
+            <returns>Обновленный объект.</returns>
+        </member>
+        <member name="M:BSF.DAL.BaseOwnersRepo.PatchAsync(System.Int64,System.String,BSF.DAL.Abstractions.Dto.OwnerEntityDto)">
+            <summary>
+            Обновление одного поля объекта.
+            </summary>
+            <param name="id">Идентификационный номер объекта.</param>
+            <param name="property">Название поля объекта.</param>
+            <param name="model">Модель объекта, содержащая новое значение поля.</param>
+            <returns>Обновленный объект.</returns>
+        </member>
+        <member name="T:BSF.DAL.BaseRepo`3">
+            <summary>
+            Базовый класс для CRUD-репозиториев
+            </summary>
+            <typeparam name="TDbDtoId">Идентификационный номер.</typeparam>
+            <typeparam name="TDbDto">Транспортная модель объекта.</typeparam>
+            <typeparam name="TEntity">Модель объекта базы данных.</typeparam>
+        </member>
+        <member name="F:BSF.DAL.BaseRepo`3.Conn">
+            <summary/>
+        </member>
+        <member name="F:BSF.DAL.BaseRepo`3.AllowedColumns">
+            <summary>
+            Разрешенные поля для редактирования.
+            </summary>
+        </member>
+        <member name="F:BSF.DAL.BaseRepo`3.Mapper">
+            <summary>
+            Класс для конвертации моделей БД в транспортные модели и наоборот.
+            </summary>
+        </member>
+        <member name="F:BSF.DAL.BaseRepo`3.CrudSqlQueries">
+            <summary>
+            Sql-скрипты для базовых команд: 
+            0 - Создание записи, 1 - Удаление записи, 2 - Получение записи,
+            3 - Получение списка, 4 - Обновление записи.
+            </summary>
+        </member>
+        <member name="M:BSF.DAL.BaseRepo`3.#ctor(BSF.DAL.Abstractions.Connection.IDbConnectionFactory,AutoMapper.IMapper)">
+            <summary/>
+        </member>
+        <member name="M:BSF.DAL.BaseRepo`3.CreateAsync(`1)">
+            <inheritdoc cref="M:BSF.DAL.Abstractions.IBaseRepo`2.CreateAsync(`1)"/>
+        </member>
+        <member name="M:BSF.DAL.BaseRepo`3.DeleteAsync(`0)">
+            <inheritdoc cref="M:BSF.DAL.Abstractions.IBaseRepo`2.DeleteAsync(`0)"/>
+        </member>
+        <member name="M:BSF.DAL.BaseRepo`3.GetAsync(`0)">
+            <inheritdoc cref="M:BSF.DAL.Abstractions.IBaseRepo`2.GetAsync(`0)"/>
+        </member>
+        <member name="M:BSF.DAL.BaseRepo`3.GetListAsync">
+            <inheritdoc cref="M:BSF.DAL.Abstractions.IBaseRepo`2.GetListAsync"/>
+        </member>
+        <member name="M:BSF.DAL.BaseRepo`3.PatchAsync(`0,System.String,`1)">
+            <inheritdoc cref="M:BSF.DAL.Abstractions.IBaseRepo`2.PatchAsync(`0,System.String,`1)"/>
+        </member>
+        <member name="M:BSF.DAL.BaseRepo`3.UpdateAsync(`0,`1)">
+            <inheritdoc cref="M:BSF.DAL.Abstractions.IBaseRepo`2.UpdateAsync(`0,`1)"/>
+        </member>
+        <member name="M:BSF.DAL.BaseStoragesRepo.PatchAsync(System.Int64,System.String,BSF.DAL.Abstractions.Dto.StorageEntityDto)">
+            <summary>
+            Обновление одного поля объекта.
+            </summary>
+            <param name="id">Идентификационный номер объекта.</param>
+            <param name="property">Название поля объекта.</param>
+            <param name="model">Модель объекта, содержащая новое значение поля.</param>
+            <returns>Обновленный объект.</returns>
+        </member>
+    </members>
+</doc>
