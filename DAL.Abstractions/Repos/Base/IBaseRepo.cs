@@ -3,35 +3,40 @@ using System.Threading.Tasks;
 
 namespace BSF.DAL.Abstractions
 {
+    /// <summary>
+    /// Базовый интерфейс для репозиториев
+    /// </summary>
+    /// <typeparam name="TDbDtoId"></typeparam>
+    /// <typeparam name="TDbDto"></typeparam>
     public interface IBaseRepo <in TDbDtoId, TDbDto>
     {
         /// <summary>
-        /// Базовый интерфейс метода "Создать запись"
+        /// Базовый интерфейс метода "Создать запись".
         /// </summary>
         Task<TDbDto> CreateAsync(TDbDto source);
 
         /// <summary>
-        /// Базовый интерфейс метода "Получить запись"
+        /// Базовый интерфейс метода "Получить запись".
         /// </summary>
         Task<TDbDto> GetAsync(TDbDtoId id);
 
         /// <summary>
-        /// Базовый интерфейс метода "Получить список"
+        /// Базовый интерфейс метода "Получить список".
         /// </summary>
         Task<IReadOnlyList<TDbDto>> GetListAsync();
 
         /// <summary>
-        /// Базовый интерфейс метода "Обновить запись"
+        /// Базовый интерфейс метода "Обновить запись".
         /// </summary>
         Task<TDbDto> UpdateAsync(TDbDtoId id, TDbDto source);
 
         /// <summary>
-        /// Базовый интерфейс метода "Удалить запись"
+        /// Базовый интерфейс метода "Удалить запись".
         /// </summary>
         Task<int> DeleteAsync(TDbDtoId id);
 
         /// <summary>
-        /// Базовый интерфейс метода "Частично обновить запись"
+        /// Базовый интерфейс метода "Частично обновить запись".
         /// </summary>
         Task<TDbDto> PatchAsync(TDbDtoId id, string property, TDbDto model);
     }

@@ -164,6 +164,13 @@
             Идентификационный номер пользователя.
             </summary>
         </member>
+        <member name="T:BSF.BLL.Abstractions.IBaseService`2">
+            <summary>
+            Базовый интерфейс для CRUD методов
+            </summary>
+            <typeparam name="TBusinessDtoId">Тип идентификатора объекта.</typeparam>
+            <typeparam name="TBusinessDto">Тип объекта.</typeparam>
+        </member>
         <member name="M:BSF.BLL.Abstractions.IBaseService`2.CreateAsync(`1)">
             <summary>
             Базовый интерфейс метода "Создать запись"

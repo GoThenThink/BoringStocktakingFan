@@ -20,7 +20,7 @@ namespace BSF.DAL.Abstractions.Dto
         /// <summary>
         /// Код предмета.
         /// </summary>
-        public int Code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// Описание предмета.
@@ -30,17 +30,17 @@ namespace BSF.DAL.Abstractions.Dto
         /// <summary>
         /// Идентификационный номер категории.
         /// </summary>
-        public long CategoryId { get; set; }
+        public long? CategoryId { get; set; }
 
         /// <summary>
         /// Идентификационный номер хранилища.
         /// </summary>
-        public long StorageId { get; set; }
+        public long? StorageId { get; set; }
 
         /// <summary>
         /// Идентификационный номер владельца предмета.
         /// </summary>
-        public long OwnerId { get; set; }
+        public long? OwnerId { get; set; }
 
         /// <summary>
         /// Идентификационный номер пользователя.

@@ -16,9 +16,9 @@ namespace Migrations
             Create.Table(StoragesConst.Table)
                 .WithColumn(StoragesConst.Id).AsInt64().PrimaryKey().Identity()
                 .WithColumn(StoragesConst.Name).AsAnsiString(512).NotNullable().Unique()
-                .WithColumn(StoragesConst.CodePrefixId).AsInt32().Nullable().ForeignKey(StoragesConst.FkCodePrefix, CodePrefixesConst.Table, CodePrefixesConst.Id)
+                .WithColumn(StoragesConst.CodePrefixId).AsInt32().Nullable().ForeignKey(StoragesConst.FkCodePrefix, CodePrefixesConst.Table, CodePrefixesConst.Id).OnDelete(System.Data.Rule.SetNull)
                 .WithColumn(StoragesConst.Description).AsString().Nullable()
-                .WithColumn(StoragesConst.ParentId).AsInt64().Nullable().ForeignKey(StoragesConst.FkParent, StoragesConst.Table, StoragesConst.Id)
+                .WithColumn(StoragesConst.ParentId).AsInt64().Nullable().ForeignKey(StoragesConst.FkParent, StoragesConst.Table, StoragesConst.Id).OnDelete(System.Data.Rule.Cascade)
                 .WithColumn(StoragesConst.UserId).AsGuid().NotNullable();
 
             Create.Index(StoragesConst.IxPk)

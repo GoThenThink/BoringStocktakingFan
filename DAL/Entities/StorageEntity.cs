@@ -20,7 +20,7 @@ namespace BSF.DAL.Entities
         /// <summary>
         /// Код-префикс.
         /// </summary>
-        public int CodePrefixId { get; set; }
+        public int? CodePrefixId { get; set; }
 
         /// <summary>
         /// Описание хранилища.
@@ -30,7 +30,7 @@ namespace BSF.DAL.Entities
         /// <summary>
         /// Идентификационный номер родительского хранилища.
         /// </summary>
-        public long ParentId { get; set; }
+        public long? ParentId { get; set; }
 
         /// <summary>
         /// Идентификационный номер пользователя.

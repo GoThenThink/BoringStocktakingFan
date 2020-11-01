@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BSF.BLL</name>
+    </assembly>
+    <members>
+        <member name="T:BSF.BLL.DependencyInjection">
+            <summary>
+            Класс для установки уровня бизнес-логики
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.DependencyInjection.AddBusinessLayer(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Добавляет все компноненты уровня бизнес-логики.
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.BaseCategoriesService.#ctor(BSF.DAL.Abstractions.IBaseCategoriesRepo,AutoMapper.IMapper,FluentValidation.IValidator{BSF.BLL.Abstractions.Dto.CategoryBusinessDto})">
+            <summary/>
+        </member>
+        <member name="M:BSF.BLL.BaseCodePrefixesService.#ctor(BSF.DAL.Abstractions.IBaseCodePrefixesRepo,AutoMapper.IMapper,FluentValidation.IValidator{BSF.BLL.Abstractions.Dto.CodePrefixBusinessDto})">
+            <summary/>
+        </member>
+        <member name="M:BSF.BLL.BaseItemsService.#ctor(BSF.DAL.Abstractions.IBaseItemsRepo,AutoMapper.IMapper,FluentValidation.IValidator{BSF.BLL.Abstractions.Dto.ItemBusinessDto})">
+            <summary/>
+        </member>
+        <member name="M:BSF.BLL.BaseOwnersService.#ctor(BSF.DAL.Abstractions.IBaseOwnersRepo,AutoMapper.IMapper,FluentValidation.IValidator{BSF.BLL.Abstractions.Dto.OwnerBusinessDto})">
+            <summary/>
+        </member>
+        <member name="T:BSF.BLL.BaseService`5">
+            <summary>
+            Базовый класс для сервисов, содержащих бизнес-логику
+            </summary>
+            <typeparam name="TBusinessDtoId">Тип идентификатора объекта.</typeparam>
+            <typeparam name="TBusinessDto">Тип транспортной модели объекта уровня бизнес-логики.</typeparam>
+            <typeparam name="TDbDto">Тип транспортной модели объекта уровня базы данных.</typeparam>
+            <typeparam name="TRepository">Тип репозитория.</typeparam>
+            <typeparam name="TValidator">Тип валидатора.</typeparam>
+        </member>
+        <member name="F:BSF.BLL.BaseService`5.Repository">
+            <summary>
+            Экземпляр репозитория.
+            </summary>
+        </member>
+        <member name="F:BSF.BLL.BaseService`5.Mapper">
+            <summary>
+            Класс для конвертации моделей БД в транспортные модели и наоборот.
+            </summary>
+        </member>
+        <member name="F:BSF.BLL.BaseService`5.Validator">
+            <summary>
+            Класс для валидации входящих данных.
+            </summary>
+        </member>
+        <member name="F:BSF.BLL.BaseService`5.PropertyCheckForPatch">
+            <summary>
+            Список полей, доступных для патча.
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.BaseService`5.#ctor(`3,AutoMapper.IMapper,`4)">
+            <summary/>
+        </member>
+        <member name="M:BSF.BLL.BaseService`5.CreateAsync(`1)">
+            <inheritdoc cref="M:BSF.BLL.Abstractions.IBaseService`2.CreateAsync(`1)"/>
+        </member>
+        <member name="M:BSF.BLL.BaseService`5.DeleteAsync(`0)">
+            <inheritdoc cref="M:BSF.BLL.Abstractions.IBaseService`2.DeleteAsync(`0)"/>
+        </member>
+        <member name="M:BSF.BLL.BaseService`5.GetAsync(`0)">
+            <inheritdoc cref="M:BSF.BLL.Abstractions.IBaseService`2.GetAsync(`0)"/>
+        </member>
+        <member name="M:BSF.BLL.BaseService`5.GetListAsync">
+            <inheritdoc cref="M:BSF.BLL.Abstractions.IBaseService`2.GetListAsync"/>
+        </member>
+        <member name="M:BSF.BLL.BaseService`5.PatchAsync(`0,System.String,`1)">
+            <inheritdoc cref="M:BSF.BLL.Abstractions.IBaseService`2.PatchAsync(`0,System.String,`1)"/>
+        </member>
+        <member name="M:BSF.BLL.BaseService`5.UpdateAsync(`0,`1)">
+            <inheritdoc cref="M:BSF.BLL.Abstractions.IBaseService`2.UpdateAsync(`0,`1)"/>
+        </member>
+        <member name="M:BSF.BLL.BaseStoragesService.#ctor(BSF.DAL.Abstractions.IBaseStoragesRepo,AutoMapper.IMapper,FluentValidation.IValidator{BSF.BLL.Abstractions.Dto.StorageBusinessDto})">
+            <summary/>
+        </member>
+        <member name="T:BSF.BLL.Validating.Validators.CategoryValidator">
+            <summary>
+            Валидатор для транспортного объекта категории
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Validating.Validators.CategoryValidator.#ctor">
+            <summary/>
+        </member>
+        <member name="T:BSF.BLL.Validating.Validators.CodePrefixValidator">
+            <summary>
+            Валидатор для транспортного объекта кода-префикса
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Validating.Validators.CodePrefixValidator.#ctor">
+            <summary/>
+        </member>
+        <member name="T:BSF.BLL.Validating.Validators.ItemValidator">
+            <summary>
+            Валидатор для транспортного объекта хранилища
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Validating.Validators.ItemValidator.#ctor">
+            <summary/>
+        </member>
+        <member name="T:BSF.BLL.Validating.Validators.OwnerValidator">
+            <summary>
+            Валидатор для транспортного объекта владельца предмета
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Validating.Validators.OwnerValidator.#ctor">
+            <summary/>
+        </member>
+        <member name="T:BSF.BLL.Validating.Validators.StorageValidator">
+            <summary>
+            Валидатор для транспортного объекта хранилища
+            </summary>
+        </member>
+        <member name="M:BSF.BLL.Validating.Validators.StorageValidator.#ctor">
+            <summary/>
+        </member>
+    </members>
+</doc>

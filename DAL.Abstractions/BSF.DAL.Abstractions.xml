@@ -194,34 +194,41 @@
             Интерфейс для репозитория "Владельцы предметов"
             </summary>
         </member>
+        <member name="T:BSF.DAL.Abstractions.IBaseRepo`2">
+            <summary>
+            Базовый интерфейс для репозиториев
+            </summary>
+            <typeparam name="TDbDtoId"></typeparam>
+            <typeparam name="TDbDto"></typeparam>
+        </member>
         <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.CreateAsync(`1)">
             <summary>
-            Базовый интерфейс метода "Создать запись"
+            Базовый интерфейс метода "Создать запись".
             </summary>
         </member>
         <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.GetAsync(`0)">
             <summary>
-            Базовый интерфейс метода "Получить запись"
+            Базовый интерфейс метода "Получить запись".
             </summary>
         </member>
         <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.GetListAsync">
             <summary>
-            Базовый интерфейс метода "Получить список"
+            Базовый интерфейс метода "Получить список".
             </summary>
         </member>
         <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.UpdateAsync(`0,`1)">
             <summary>
-            Базовый интерфейс метода "Обновить запись"
+            Базовый интерфейс метода "Обновить запись".
             </summary>
         </member>
         <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.DeleteAsync(`0)">
             <summary>
-            Базовый интерфейс метода "Удалить запись"
+            Базовый интерфейс метода "Удалить запись".
             </summary>
         </member>
         <member name="M:BSF.DAL.Abstractions.IBaseRepo`2.PatchAsync(`0,System.String,`1)">
             <summary>
-            Базовый интерфейс метода "Частично обновить запись"
+            Базовый интерфейс метода "Частично обновить запись".
             </summary>
         </member>
         <member name="T:BSF.DAL.Abstractions.IBaseStoragesRepo">

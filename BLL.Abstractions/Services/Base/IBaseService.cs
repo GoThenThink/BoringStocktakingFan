@@ -3,6 +3,11 @@ using System.Threading.Tasks;
 
 namespace BSF.BLL.Abstractions
 {
+    /// <summary>
+    /// Базовый интерфейс для CRUD методов
+    /// </summary>
+    /// <typeparam name="TBusinessDtoId">Тип идентификатора объекта.</typeparam>
+    /// <typeparam name="TBusinessDto">Тип объекта.</typeparam>
     public interface IBaseService<in TBusinessDtoId, TBusinessDto>
     {
         /// <summary>

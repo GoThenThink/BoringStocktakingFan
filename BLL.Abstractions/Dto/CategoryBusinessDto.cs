@@ -20,7 +20,7 @@ namespace BSF.BLL.Abstractions.Dto
         /// <summary>
         /// Код-префикс.
         /// </summary>
-        public int CodePrefixId { get; set; }
+        public int? CodePrefixId { get; set; }
 
         /// <summary>
         /// Описание категории.
@@ -30,7 +30,7 @@ namespace BSF.BLL.Abstractions.Dto
         /// <summary>
         /// Идентификационный номер родительской категории.
         /// </summary>
-        public long ParentId { get; set; }
+        public long? ParentId { get; set; }
 
         /// <summary>
         /// Идентификационный номер пользователя.

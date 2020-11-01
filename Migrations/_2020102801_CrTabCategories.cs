@@ -16,9 +16,9 @@ namespace Migrations
             Create.Table(CategoriesConst.Table)
                 .WithColumn(CategoriesConst.Id).AsInt64().PrimaryKey().Identity()
                 .WithColumn(CategoriesConst.Name).AsAnsiString(512).NotNullable().Unique()
-                .WithColumn(CategoriesConst.CodePrefixId).AsInt32().Nullable().ForeignKey(CategoriesConst.FkCodePrefix, CodePrefixesConst.Table, CodePrefixesConst.Id)
+                .WithColumn(CategoriesConst.CodePrefixId).AsInt32().Nullable().ForeignKey(CategoriesConst.FkCodePrefix, CodePrefixesConst.Table, CodePrefixesConst.Id).OnDelete(System.Data.Rule.SetNull)
                 .WithColumn(CategoriesConst.Description).AsString().Nullable()
-                .WithColumn(CategoriesConst.ParentId).AsInt64().Nullable().ForeignKey(CategoriesConst.FkParent, CategoriesConst.Table, CategoriesConst.Id)
+                .WithColumn(CategoriesConst.ParentId).AsInt64().Nullable().ForeignKey(CategoriesConst.FkParent, CategoriesConst.Table, CategoriesConst.Id).OnDelete(System.Data.Rule.Cascade)
                 .WithColumn(CategoriesConst.UserId).AsGuid().NotNullable();
 
             Create.Index(CategoriesConst.IxPk)

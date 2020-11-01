@@ -18,9 +18,9 @@ namespace Migrations
                 .WithColumn(ItemsConst.Name).AsAnsiString(512).NotNullable().Unique()
                 .WithColumn(ItemsConst.Code).AsAnsiString(4).Nullable()
                 .WithColumn(ItemsConst.Description).AsString().Nullable()
-                .WithColumn(ItemsConst.CategoryId).AsInt64().Nullable().ForeignKey(ItemsConst.FkCategory, CategoriesConst.Table, CategoriesConst.Id)
-                .WithColumn(ItemsConst.StorageId).AsInt64().Nullable().ForeignKey(ItemsConst.FkStorage, StoragesConst.Table, StoragesConst.Id)
-                .WithColumn(ItemsConst.OwnerId).AsInt64().Nullable().ForeignKey(ItemsConst.FkOwner, OwnersConst.Table, OwnersConst.Id)
+                .WithColumn(ItemsConst.CategoryId).AsInt64().Nullable().ForeignKey(ItemsConst.FkCategory, CategoriesConst.Table, CategoriesConst.Id).OnDelete(System.Data.Rule.SetNull)
+                .WithColumn(ItemsConst.StorageId).AsInt64().Nullable().ForeignKey(ItemsConst.FkStorage, StoragesConst.Table, StoragesConst.Id).OnDelete(System.Data.Rule.SetNull)
+                .WithColumn(ItemsConst.OwnerId).AsInt64().Nullable().ForeignKey(ItemsConst.FkOwner, OwnersConst.Table, OwnersConst.Id).OnDelete(System.Data.Rule.SetNull)
                 .WithColumn(ItemsConst.UserId).AsGuid().NotNullable();
 
             Create.Index(ItemsConst.IxPk).OnTable(ItemsConst.Table).WithOptions().Clustered().OnColumn(ItemsConst.Id);
