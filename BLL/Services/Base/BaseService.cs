@@ -67,7 +67,7 @@ namespace BSF.BLL
         {
             var requestedDalObject = await Repository.GetAsync(id);
             if (requestedDalObject is null)
-                throw new ArgumentException($"{typeof(TBusinessDto).Name} object is not found.");
+                throw new ArgumentException($"{typeof(TBusinessDto).Name} объект по заданному идентификатору не найден.");
 
             return Mapper.Map<TBusinessDto>(requestedDalObject);
         }
@@ -83,7 +83,7 @@ namespace BSF.BLL
         {
             if(!PropertyCheckForPatch.TryGetValue(property, out _))
             {
-                throw new ArgumentException($"{property} property is unavailable for editing or does not exist.");
+                throw new ArgumentException($"{property} поле недоступно для редактирования или оно не существует.");
             }
 
             var validationResult = await Validator.ValidateAsync(model, options => { options.ThrowOnFailures(); options.IncludeProperties(property); });
@@ -92,7 +92,7 @@ namespace BSF.BLL
 
             var requestedDalObject = await Repository.PatchAsync(id, property, dalObject);
             if (requestedDalObject is null)
-                throw new ArgumentException($"{typeof(TBusinessDto).Name} object is not found.");
+                throw new ArgumentException($"{typeof(TBusinessDto).Name} объект по заданному идентификатору не найден.");
 
             return Mapper.Map<TBusinessDto>(requestedDalObject);
         }
@@ -105,7 +105,7 @@ namespace BSF.BLL
             var dalObject = Mapper.Map<TDbDto>(source);
             var requestedDalObject = await Repository.UpdateAsync(id, dalObject);
             if (requestedDalObject is null)
-                throw new ArgumentException($"{typeof(TBusinessDto).Name} object is not found.");
+                throw new ArgumentException($"{typeof(TBusinessDto).Name} объект по заданному идентификатору не найден.");
 
             return Mapper.Map<TBusinessDto>(requestedDalObject);
         }

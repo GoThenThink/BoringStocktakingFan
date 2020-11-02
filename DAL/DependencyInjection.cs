@@ -13,14 +13,14 @@ namespace BSF.DAL
     public static class DependencyInjection
     {
         ///<summary>
-        /// Добавление всех компонентов уровня
+        /// Добавление всех компонентов уровня.
         /// </summary>
         public static IServiceCollection AddDataAccessLayer(this IServiceCollection services, string connectionString)
         {
             return services
                 .AddSingleton<IDbConnectionFactory>(new DbConnectionFactory(connectionString))
-                .RegisterRepositories()
-                .RegisterMapperProfiles();
+                .RegisterMapperProfiles()
+                .RegisterRepositories();
         }
 
         private static IServiceCollection RegisterRepositories(
@@ -43,8 +43,6 @@ namespace BSF.DAL
                 .AddSingleton<Profile, StorageEntityProfile>()
                 .AddSingleton<Profile, OwnerEntityProfile>()
                 .AddSingleton<Profile, ItemEntityProfile>();
-
         }
-
     }
 }

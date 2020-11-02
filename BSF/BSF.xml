@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BSF</name>
+    </assembly>
+    <members>
+        <member name="T:BSF.Controllers.BaseController`3">
+            <summary>
+            Базовый контроллер для CRUD-операций
+            </summary>
+        </member>
+        <member name="F:BSF.Controllers.BaseController`3.Service">
+            <summary>
+            Экземпляр сервиса бизнес-логики.
+            </summary>
+        </member>
+        <member name="M:BSF.Controllers.BaseController`3.#ctor(`2)">
+            <summary/>
+        </member>
+        <member name="M:BSF.Controllers.BaseController`3.GetAsync(`0)">
+            <summary>
+            Возвращает объект, найденный по заданному идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+        </member>
+        <member name="M:BSF.Controllers.BaseController`3.GetListAsync">
+            <summary>
+            Возращает все объекты.
+            </summary>
+        </member>
+        <member name="M:BSF.Controllers.BaseController`3.PostAsync(`1)">
+            <summary>
+            Создает новый объект.
+            </summary>
+            <param name="model">Объект для создания.</param>
+        </member>
+        <member name="M:BSF.Controllers.BaseController`3.PatchAsync(`0,System.String,`1)">
+            <summary>
+            Обновление поля существующего объекта.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="property">Название поля.</param>
+            <param name="model">Объект, который содержит новое значение поля.</param>
+        </member>
+        <member name="M:BSF.Controllers.BaseController`3.PutAsync(`0,`1)">
+            <summary>
+            Обновляет существующий объект.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="model">Новый объект.</param>
+        </member>
+        <member name="M:BSF.Controllers.BaseController`3.DeleteAsync(`0)">
+            <summary>
+            Удаляет существующий объект.
+            </summary>
+            <param name="id">Идентификатор.</param>
+        </member>
+        <member name="T:BSF.Controllers.CategoriesController">
+            <summary>
+            Контроллер для управления категориями
+            </summary>
+        </member>
+        <member name="M:BSF.Controllers.CategoriesController.#ctor(BSF.BLL.Abstractions.IBaseCategoriesService)">
+            <summary/>
+        </member>
+        <member name="T:BSF.Controllers.CodePrefixesController">
+            <summary>
+            Контроллер для управления код-префиксами
+            </summary>
+        </member>
+        <member name="M:BSF.Controllers.CodePrefixesController.#ctor(BSF.BLL.Abstractions.IBaseCodePrefixesService)">
+            <summary/>
+        </member>
+        <member name="T:BSF.Controllers.ItemsController">
+            <summary>
+            Контроллер для управления предметами
+            </summary>
+        </member>
+        <member name="M:BSF.Controllers.ItemsController.#ctor(BSF.BLL.Abstractions.IBaseItemsService)">
+            <summary/>
+        </member>
+        <member name="T:BSF.Controllers.OwnersController">
+            <summary>
+            Контроллер для управления владельцами предметов
+            </summary>
+        </member>
+        <member name="M:BSF.Controllers.OwnersController.#ctor(BSF.BLL.Abstractions.IBaseOwnersService)">
+            <summary/>
+        </member>
+        <member name="T:BSF.Controllers.StoragesController">
+            <summary>
+            Контроллер для управления хранилищами
+            </summary>
+        </member>
+        <member name="M:BSF.Controllers.StoragesController.#ctor(BSF.BLL.Abstractions.IBaseStoragesService)">
+            <summary/>
+        </member>
+        <member name="T:BSF.Extensions.SchemaFilter">
+            <summary>
+            Фильтр, активирующий значения по-умолчанию для Swagger UI.
+            </summary>
+        </member>
+        <member name="M:BSF.Extensions.SchemaFilter.Apply(Microsoft.OpenApi.Models.OpenApiSchema,Swashbuckle.AspNetCore.SwaggerGen.SchemaFilterContext)">
+            <summary/>
+        </member>
+        <member name="T:BSF.Extensions.SwaggerExtension">
+            <summary>
+            Расширение стартапа для настройки Swagger.
+            </summary>
+        </member>
+        <member name="T:BSF.Program">
+            <summary/>
+        </member>
+        <member name="M:BSF.Program.Main(System.String[])">
+            <summary/>
+        </member>
+        <member name="M:BSF.Program.CreateHostBuilder(System.String[])">
+            <summary/>
+        </member>
+        <member name="T:BSF.Startup">
+            <summary/>
+        </member>
+        <member name="M:BSF.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary/>
+        </member>
+        <member name="P:BSF.Startup.Configuration">
+            <summary/>
+        </member>
+        <member name="M:BSF.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary/>
+        </member>
+        <member name="M:BSF.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary/>
+        </member>
+    </members>
+</doc>

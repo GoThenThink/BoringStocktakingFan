@@ -1,41 +1,47 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using BSF.BLL;
+using BSF.DAL;
+using BSF.Extensions;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace BSF
 {
+    /// <summary/>
     public class Startup
     {
+        /// <summary/>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary/>
         public IConfiguration Configuration { get; }
 
-
+        /// <summary/>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services
+                .AddDataAccessLayer(Configuration.GetConnectionString("DataBase"))
+                .AddBusinessLayer()
+                .AddAutoMapper()
+                .AddSwagger();
         }
 
+        /// <summary/>
         public void Configure(IApplicationBuilder app)
         {
-            app.UseRouting();
-            app.UseAuthorization();
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app
+                .UseRouting()
+                .UseSwaggerWithCustomSettings()
+                .UseAuthorization()
+                .UseEndpoints(endpoints =>
+                {
+                    endpoints.MapControllers();
+                });
         }
     }
 }

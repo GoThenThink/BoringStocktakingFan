@@ -1,5 +1,5 @@
 ﻿using BSF.DAL.Abstractions.Connection;
-using Microsoft.Data.Sqlite;
+using Npgsql;
 using System.Data;
 
 namespace BSF.DAL.Connection
@@ -15,7 +15,7 @@ namespace BSF.DAL.Connection
 
         public IDbConnection GetConnection()
         {
-            return new SqliteConnection(_connectionString);
+            return new NpgsqlConnection(_connectionString);
         }
     }
 }

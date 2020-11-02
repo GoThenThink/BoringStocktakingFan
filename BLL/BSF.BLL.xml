@@ -11,7 +11,7 @@
         </member>
         <member name="M:BSF.BLL.DependencyInjection.AddBusinessLayer(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
-            Добавляет все компноненты уровня бизнес-логики.
+            Добавляет все компоненты уровня бизнес-логики.
             </summary>
         </member>
         <member name="M:BSF.BLL.BaseCategoriesService.#ctor(BSF.DAL.Abstractions.IBaseCategoriesRepo,AutoMapper.IMapper,FluentValidation.IValidator{BSF.BLL.Abstractions.Dto.CategoryBusinessDto})">

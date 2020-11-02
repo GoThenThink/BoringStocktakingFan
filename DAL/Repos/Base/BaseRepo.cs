@@ -86,6 +86,7 @@ namespace BSF.DAL
         public virtual async Task<TDbDto> UpdateAsync(TDbDtoId id, TDbDto source)
         {
             var entity = Mapper.Map<TEntity>(source);
+            entity.Id = id;
             using var conn = Conn.GetConnection();
             var updatedEntity = await conn.QuerySingleOrDefaultAsync<TEntity>(CrudSqlQueries[CrudMethodsEnum.Update], entity);
             return Mapper.Map<TDbDto>(updatedEntity);

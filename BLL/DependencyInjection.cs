@@ -11,7 +11,7 @@ namespace BSF.BLL
     public static class DependencyInjection
     {
         /// <summary>
-        /// Добавляет все компноненты уровня бизнес-логики.
+        /// Добавляет все компоненты уровня бизнес-логики.
         /// </summary>
         public static IServiceCollection AddBusinessLayer(this IServiceCollection services)
         {
@@ -30,6 +30,5 @@ namespace BSF.BLL
                 .AddScoped<IBaseOwnersService, BaseOwnersService>()
                 .AddScoped<IBaseStoragesService, BaseStoragesService>();
         }
-
     }
 }
