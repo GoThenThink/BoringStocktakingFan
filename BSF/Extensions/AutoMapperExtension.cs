@@ -12,7 +12,6 @@ namespace BSF.Extensions
                 {
                     var configuration = new MapperConfiguration(cfg => {
                         cfg.AddProfiles(provider.GetServices<Profile>());
-                        cfg.Advanced.AllowAdditiveTypeMapCreation = true;
                     });
 
                     configuration.AssertConfigurationIsValid();
